@@ -50,7 +50,7 @@ img_height = 350
 img_width = 350
 def predict(image):
 	#Upload the model saved using the 4 products data augmented section
-    modelsaved = r"~/models/retail_model_05272021_183449.h5"
+    modelsaved = r"~/models/retail_model_augmented_05272021_183451.h5"
     IMAGE_SHAPE = (530, 530,3)
     model = load_model(modelsaved, compile=False, custom_objects={'KerasLayer': hub.KerasLayer})
     img = keras.preprocessing.image.load_img(r"~/images/CapturedImage.jpg",target_size=(img_height, img_width))
